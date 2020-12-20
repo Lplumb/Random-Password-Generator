@@ -2,18 +2,18 @@
 var generateBtn = document.querySelector("#generate");
 
 //arrays for all avaiable characters
-var passKey = {
-number: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-specChar: ["!", "@", "#", "$", "%", "^", "&", "*", "~", "+", "="],
-lowerCase: ("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"),
-upperCase: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
-}
+var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var specChar = ["!", "@", "#", "$", "%", "^", "&", "*", "~", "+", "="];
+var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
 //adding variables for confirmations
 var passLength;
 var confirmUpper;
 var confirmLower;
 var confirmSpecial;
 var confirmnumber;
+
 
 //asked for password length
 function makePassword(){
@@ -33,7 +33,7 @@ function askUpper() {
   confirmUpper = confirm("Would you like uppercase letters in your password?");
   return confirmUpper;
 }
-//asks if you want lowercase letters in your password
+
 function askLower() {
   confirmLower = confirm("Would you like lowercase letters in your password?");
   return confirmLower;
@@ -49,7 +49,35 @@ function askNumber() {
   return confirmnumber;
 }
 
-if (confirmUpper)
+
+// mixes all of the arrays if they are true
+var passCharacters = []
+
+if (confirmUpper) {
+  passCharacters = passCharacters.concat(upperCase)
+}
+
+if (confirmLower) {
+  passCharacters = passCharacters.concat(lowerCase)
+}
+
+if (confirmnumber) {
+  passCharacters = passCharacters.concat(number)
+}
+
+if (confirmSpecial) {
+  passCharacters = passCharacters.concat(specChar)
+}
+
+console.log(passCharacters);
+ 
+var ranPassword = ""
+
+for (i = 0; i < passLength; i++) (
+  ranpassword = ranPassword + passCharacters[Math.floor(math.random() * passCharacters.length)]
+);
+
+console.log(ranPassword);
 
 
 
