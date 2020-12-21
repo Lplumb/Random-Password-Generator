@@ -51,6 +51,8 @@ function askNumber() {
 
 
 // mixes all of the arrays if they are true
+function genPassword() {
+
 var passCharacters = []
 
 if (confirmUpper) {
@@ -70,14 +72,23 @@ if (confirmSpecial) {
 }
 
 console.log(passCharacters);
- 
-var ranPassword = ""
 
-for (i = 0; i < passLength; i++) (
-  ranpassword = ranPassword + passCharacters[Math.floor(math.random() * passCharacters.length)]
-);
 
+ //creates the password
+
+
+
+ var ranPassword = "";
+
+for (i = 0; i < passLength; i++) {
+  ranpassword = ranPassword + passCharacters[Math.floor(math.random() * passLength.length)];
+  console.log(ranPassword);
+}
+
+document.getElementById("#password").textContent = ranPassword;
 console.log(ranPassword);
+
+}
 
 
 
