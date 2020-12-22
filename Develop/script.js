@@ -7,6 +7,8 @@ var specChar = ["!", "@", "#", "$", "%", "^", "&", "*", "~", "+", "="];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
+var ranPassword = "";
+
 //adding variables for confirmations
 var passLength;
 var confirmUpper;
@@ -26,6 +28,7 @@ if (passLength < 8 || passLength > 128) {
 }
 
 return passLength;
+
 }
 
 //asks if you want uppercase letters in your password
@@ -51,9 +54,9 @@ function askNumber() {
 
 
 // mixes all of the arrays if they are true
-function genPassword() {
+function generatePassword() {
 
-var passCharacters = []
+var passCharacters = [];
 
 if (confirmUpper) {
   passCharacters = passCharacters.concat(upperCase)
@@ -75,21 +78,18 @@ console.log(passCharacters);
 
 
  //creates the password
+ console.log(passLength);
 
-
-
- var ranPassword = "";
 
 for (i = 0; i < passLength; i++) {
-  ranpassword = ranPassword + passCharacters[Math.floor(math.random() * passLength.length)];
+  ranPassword = ranPassword + passCharacters[Math.floor(Math.random() * passCharacters.length)];
   console.log(ranPassword);
 }
 
-document.getElementById("#password").textContent = ranPassword;
+//document.getElementById("#password").textContent = ranPassword;
 console.log(ranPassword);
-
+return ranPassword
 }
-
 
 
 
