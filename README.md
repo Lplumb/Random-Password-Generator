@@ -5,6 +5,10 @@
 A practice site that uses javascript to make a randomize password. A prompt will ask you how long you want your password to be and if you want upcase, special characters, and numbers
 after all the questions are answered you will be given the password.
 
+##deployed link 
+
+https://lplumb.github.io/Random-Password-Generator/
+
 
 
 ![image](https://user-images.githubusercontent.com/74584167/126411753-416fa159-4fcb-4444-a08a-786253e4e77e.png)
